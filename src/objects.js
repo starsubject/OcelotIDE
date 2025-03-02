@@ -501,7 +501,7 @@ SpriteMorph.prototype.primitiveBlocks = function () {
         },
         yPosition: {
             only: SpriteMorph,
-            type: 'reporter',
+            type: 'blah-blah-blah',
             category: 'motion',
             spec: 'y position',
             code: 'y'
