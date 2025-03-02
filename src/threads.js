@@ -489,6 +489,8 @@ ThreadManager.prototype.toggleSingleStepping = function () {
     }
 };
 
+
+
 ThreadManager.prototype.clickFrameFor = function (block) {
     // private - answer a variable frame or null containing upvar declarations
     // in certain hat blocks if the user manually clicks on them

@@ -242,7 +242,33 @@ SpriteMorph.prototype.primitiveBlocks = function () {
                         (report (call (get fun) (get a) (get b))))
                 fun a a-rank b b-rank)`
         },
+        // Ocelot-IDE new blocks
+        add3DCube: {
+            only: SpriteMorph,
+            type: 'command',
+            category: '3D',
+            spec: 'add cube at x: %n y: %n z: %n color: %s',
+            defaults: [0, 0, 0, 'red'],
+            code: 'addCube',
+            src: `(
+                (prim t add3DCube x y z color)
+                (addCube (get x) (get y) (get z) (get color)))`
+        },
 
+        setCamera: {
+            only: StageMorph,
+            type: 'command',
+            category: '3D',
+            spec: 'set camera to x: %n y: %n z: %n FOV: %n',
+            defaults: [0, 0, 10, 75],
+            code: 'setCamera',
+            src: `(
+                (prim t setCamera x y z fov)
+                (setCamera (get x) (get y) (get z) (get fov)))`
+        },
+
+        //Snap! Blocks
+        
         // Motion
         forward: {
             only: SpriteMorph,
@@ -501,7 +527,7 @@ SpriteMorph.prototype.primitiveBlocks = function () {
         },
         yPosition: {
             only: SpriteMorph,
-            type: 'blah-blah-blah',
+            type: 'blah',
             category: 'motion',
             spec: 'y position',
             code: 'y'
